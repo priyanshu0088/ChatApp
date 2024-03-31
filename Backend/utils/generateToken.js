@@ -8,6 +8,7 @@ const generateTokenAndSetCookie = (userId, res) =>{
         maxAge: 15 * 24 * 60 * 60 * 1000, //miliseconds
         httpOnly: true, // prevents xss attacks and cross site scripting
         sameSize: "strict", // CSRF attacks forgery attacks
+        secure: process.env.NODE_ENV !== "development"
     });
 };
 
