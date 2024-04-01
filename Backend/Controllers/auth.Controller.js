@@ -76,7 +76,7 @@ export const login = async (req,res) => {
     console.log("Error in login Controller", error.message)
     res.status(500).json({error:"internal server Error"});
   }
-}
+};
 
 export const logout = (req,res) => {
   try {
@@ -87,4 +87,4 @@ export const logout = (req,res) => {
     console.log("Error in logout Controller", error.message)
     res.status(500).json({error:"internal server Error"});
   }
-}
+};

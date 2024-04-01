@@ -18,15 +18,16 @@ const userSchema = new mongoose.Schema({
     gender: {
         type: String,
         required: true,
-        enum: ["male","female"],
+        enum: ["male", "female"],
     },
     profilePic: {
         type: String,
-        default:"",
+        default: "",
     },
+// CreatedAT, UpsdatedAT
+},
 
-    
-});
+   {timestamps: true }   );
 
 const User = mongoose.model("User", userSchema);
 export default User;
