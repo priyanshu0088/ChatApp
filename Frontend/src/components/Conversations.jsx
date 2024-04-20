@@ -2,9 +2,10 @@ import React from 'react'
 import Conversation from './Conversation'
 import { getRandomEmoji } from "../utils/emojis";
 import useGetConversations from '../hooks/useGetConversations';
+
 const Conversations = () => {
  const {loading, conversations}= useGetConversations();
- console.log("CONVERSATIONS:", Conversations)
+ console.log("CONVERSATIONS:", conversations);
  return (
   <div className='py-2 flex flex-col overflow-auto'>
     {conversations.map((conversation, idx) => (
